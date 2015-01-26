@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>openidm-webapp</artifactId>
+  <packaging>war</packaging>
+
+  <name>openidm-webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <parent>
+	<groupId>org.openidmframework</groupId>
+	<artifactId>openidm-parent</artifactId>
+  	<version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>9.3.0.M1</version>
+        <configuration>
+          <scanIntervalSeconds>10</scanIntervalSeconds>
+          <webApp>
+            <contextPath>/openidm</contextPath>
+          </webApp>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+        <groupId>${project.groupId}</groupId>
+        <version>${project.parent.version}</version>
+        <artifactId>openidm-core</artifactId>
+    </dependency>
+  </dependencies>
+
+  </project>

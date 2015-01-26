@@ -17,6 +17,7 @@
 
   <modules>
     <module>openidm-core</module>
+    <module>openidm-webapp</module>
   </modules>
 
   <build>
