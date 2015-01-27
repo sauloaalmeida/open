@@ -5,7 +5,7 @@
     <title>Olá mundo</title>
 </head>
 <body>
-    <h1>Olá mundo</h1>
+    <h1>Olá mundo <%= "teste2" %></h1>
     <ul>
         <li>
             <a href="WEB-INF/views/user/userList.jsp">Listagem de usuários</a>
